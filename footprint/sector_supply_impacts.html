@@ -106,6 +106,9 @@
       // Take top 10 initially
       const sortedResults = allResults.slice(0, 10);
 
+      const matrix = sortedResults.map(row => indicators.slice(0, 10).map(indicator => row[indicator.code]));
+      console.log(JSON.stringify(matrix));
+
       const tableConfig = {
           data: sortedResults,
           layout: "fitColumns",
